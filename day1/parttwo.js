@@ -53,7 +53,6 @@ try {
     0
   );
   console.log(res);
-  // 54719 correct
 } catch (err) {
   console.error(err);
 }
