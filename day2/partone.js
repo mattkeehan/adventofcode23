@@ -38,9 +38,7 @@ const play = games => {
 
 try {
   const data = fs.readFileSync("./input.txt", "utf8").split("\n");
-  const structuredData = data.map((d, i) => formatEntry(d, i+1));
-  console.log(play(structuredData));
-  
+  console.log(play(data.map((d, i) => formatEntry(d, i+1))));
 } catch (err) {
   console.error(err);
 }
