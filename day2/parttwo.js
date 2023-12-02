@@ -17,7 +17,10 @@ const formatEntry = (line, gameNumber) => {
   };
 };
 
-const getHighest = (colour, value, currentMin) => (value[1] === colour && Number(value[0] > currentMin)) ? Number(value[0]) : currentMin;
+const getHighest = (colour, value, currentMin) =>
+  value[1] === colour && Number(value[0] > currentMin)
+    ? Number(value[0])
+    : currentMin;
 
 const play = (games) => {
   return games.reduce((acc, game) => {
@@ -26,13 +29,13 @@ const play = (games) => {
     let minGreen = 0;
 
     game.gameDetails.map((row) => {
-      row.map(item => {
-        minRed = getHighest('red', item, minRed);
-        minBlue = getHighest('blue', item, minBlue);
-        minGreen = getHighest('green', item, minGreen);
-      })
+      row.map((item) => {
+        minRed = getHighest("red", item, minRed);
+        minBlue = getHighest("blue", item, minBlue);
+        minGreen = getHighest("green", item, minGreen);
+      });
     });
-    return acc + (minRed * minBlue * minGreen);
+    return acc + minRed * minBlue * minGreen;
   }, 0);
 };
 
