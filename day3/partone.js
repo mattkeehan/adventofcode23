@@ -35,7 +35,6 @@ const checkLine = (line, prevLine, nextLine) => {
     return acc;
   }, 0);
 
-  console.log(`totalForLine ${totalForLine}\n\n`);
   return totalForLine;
 };
 
