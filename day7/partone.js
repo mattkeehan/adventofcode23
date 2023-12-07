@@ -29,9 +29,9 @@ function getHandValue(hand) {
       amtB = 0,
       amtC = 0;
     [...hand].forEach((h, i) => { 
-      if (hand[i] == a) amtA++;
-      if (hand[i] == b) amtB++;
-      if (hand[i] == c) amtC++;
+      if (h == a) amtA++;
+      if (h == b) amtB++;
+      if (h == c) amtC++;
     });
     if ([amtA, amtB, amtC].includes(3)) return THREEOFAKIND;
     return TWOPAIR;
