@@ -28,11 +28,11 @@ function getHandValue(hand) {
     let amtA = 0,
       amtB = 0,
       amtC = 0;
-    for (let i = 0; i < hand.length; i++) {
+    [...hand].forEach((h, i) => { 
       if (hand[i] == a) amtA++;
       if (hand[i] == b) amtB++;
       if (hand[i] == c) amtC++;
-    }
+    });
     if ([amtA, amtB, amtC].includes(3)) return THREEOFAKIND;
     return TWOPAIR;
   }
