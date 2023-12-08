@@ -51,7 +51,6 @@ const getResult = (input) => {
       if (type1 > type2) return -1;
       if (type1 < type2) return 1;
 
-      
       for (let i = 0; i < hand1.length; i++) {
         if (
           orderedCardValues.indexOf(hand1[i]) <
