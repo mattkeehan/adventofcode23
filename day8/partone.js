@@ -47,7 +47,7 @@ const getResult = (data) => {
 };
 
 try {
-  console.log("hello advent of code day 6");
+  console.log("hello advent of code day 8");
   const data = fs.readFileSync("./input.txt", "utf8").split("\n");
   getResult(data);
 } catch (err) {
