@@ -13,9 +13,6 @@ const findDifferences = (lineAsArr) => {
 
 const nextDiffValue = (lineAsArr) => {
   if (allSame(lineAsArr)) return lineAsArr[0];
-
-  // lineAsArr = lineAsArr.reverse();
-  console.log(lineAsArr);
   const diffs = findDifferences(lineAsArr);
   const nextDiff = nextDiffValue(diffs);
   return lineAsArr[lineAsArr.length - 1] + nextDiff;
