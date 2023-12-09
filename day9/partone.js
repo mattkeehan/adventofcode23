@@ -20,8 +20,8 @@ const nextDiffValue = (lineAsArr) => {
 };
 
 const getResult = (lines) => {
-  const lineAsArr = lines.map((line) => line.split(" ").map((n) => Number(n)));
-  const lineTotals = lineAsArr.map(nextDiffValue);
+  const linesAsArr = lines.map((line) => line.split(" ").map((n) => Number(n)));
+  const lineTotals = linesAsArr.map(nextDiffValue);
   return lineTotals.reduce((total, num) => total + num, 0);
 };
 
